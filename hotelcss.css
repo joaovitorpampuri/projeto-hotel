@@ -273,6 +273,10 @@ body {
     margin-bottom: 20px;
 }
 
+a{
+    text-decoration: none;
+}
+
 .suite-capacidade {
     border-top: 1px solid #eee;
     padding-top: 15px;
