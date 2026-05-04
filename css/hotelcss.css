@@ -609,7 +609,7 @@ a{
     font-size: 14px;
 }
 
-/* ============ RESPONSIVE ============ */
+/* ============ RESPONSIVIDADE  ============ */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
