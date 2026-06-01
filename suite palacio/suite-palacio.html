@@ -16,7 +16,14 @@
 
 
 <body>
+<script>
+const usuario = localStorage.getItem("hotelUser");
 
+if (!usuario) {
+    alert("Você precisa estar cadastrado para acessar esta suíte.");
+    window.location.href = "../formulario/cadastro.html";
+}
+</script>
 
 
 <section class="hero-suite">

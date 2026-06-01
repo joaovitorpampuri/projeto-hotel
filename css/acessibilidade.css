@@ -1,0 +1,69 @@
+.acessibilidade{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:9999;
+    display:flex;
+    gap:10px;
+}
+
+.acessibilidade button{
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#c9a96e;
+    color:white;
+    font-weight:bold;
+}
+
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .cadastro-container,
+.dark-mode .contato-card{
+    background:#222;
+    color:white;
+}
+
+.dark-mode input{
+    background:#333;
+    color:white;
+    border:1px solid #666;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .suite,
+.dark-mode .galeria,
+.dark-mode .contato,
+.dark-mode .footer {
+    background: #1e1e1e !important;
+    color: white !important;
+}
+
+.dark-mode .texto,
+.dark-mode p,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode li {
+    color: white !important;
+}
+
+.dark-mode .contato-card {
+    background: #2a2a2a;
+    border-color: #555;
+}
+
+.dark-mode .btn,
+.dark-mode .btn-reservar,
+.dark-mode .btn-fotos {
+    background: #444;
+    color: white;
+}

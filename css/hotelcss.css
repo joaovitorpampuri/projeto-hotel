@@ -19,6 +19,15 @@ height: 100%;
     --cor-azul: #4a9fb5;
     --fonte-principal: 'Poppins', 'Georgia', serif;
     --fonte-secundaria: 'Lato', sans-serif;
+
+
+    .dark-mode {
+    --cor-primaria: #000000;
+    --cor-secundaria: #2b2b2b;
+    --cor-destaque: #d4a574;
+    --cor-claro: #121212;
+    --cor-branco: #ffffff;
+}
 }
 
 html {
@@ -707,4 +716,36 @@ a{
     .contato {
         padding: 40px 15px;
     }
+}
+
+.dark-mode body {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .suite-card {
+    background: #222;
+}
+
+.dark-mode .suite-info p {
+    color: #ddd;
+}
+
+.dark-mode .sobre,
+.dark-mode .acomodacoes,
+.dark-mode .galeria {
+    background: #121212;
+}
+
+.dark-mode .sobre-texto p,
+.dark-mode .acomodacoes-descricao,
+.dark-mode .galeria-descricao {
+    color: #ddd;
+}
+
+.dark-mode .sobre-texto h2,
+.dark-mode .acomodacoes h2,
+.dark-mode .galeria h2,
+.dark-mode .suite-info h3 {
+    color: white;
 }

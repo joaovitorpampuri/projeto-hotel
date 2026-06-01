@@ -1,0 +1,107 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("../Imagens/hotel.jpeg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+/* CARD */
+.cadastro-container{
+    width:100%;
+    max-width:600px;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.cadastro-container h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#6b4423;
+    font-size:32px;
+}
+
+/* FORM */
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    font-weight:600;
+    margin-bottom:5px;
+    color:#333;
+}
+
+input{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    margin-bottom:18px;
+    font-size:15px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#c9a96e;
+    box-shadow:0 0 5px rgba(201,169,110,.5);
+}
+
+/* BOTÃO */
+input[type="submit"]{
+    background:#c9a96e;
+    color:white;
+    border:none;
+    padding:15px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+input[type="submit"]:hover{
+    background:#a88a52;
+}
+
+/* LINK VOLTAR */
+.voltar{
+    text-align:center;
+    margin-top:20px;
+}
+
+.voltar a{
+    text-decoration:none;
+    color:#6b4423;
+    font-weight:bold;
+}
+
+.voltar a:hover{
+    color:#c9a96e;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+
+    .cadastro-container{
+        padding:25px;
+    }
+
+    .cadastro-container h1{
+        font-size:26px;
+    }
+
+}

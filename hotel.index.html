@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nome do Hotel - Luxo e Conforto</title>
     <link rel="stylesheet" href="css/hotelcss.css">
+    <link rel="stylesheet" href="css/acessibilidade.css">
 </head>
 <body>
     <img src="Imagens/hotel.jpeg" alt="" id="fundo_hotel">
@@ -17,7 +18,7 @@
             <ul class="nav-menu">
                 <li><a href="#hotel">O HOTEL</a></li>
                 <li><a href="#acomodacoes">ACOMODAÇÕES</a></li>
-                <li><a href="#equipe">SERVIÇOS</a></li>
+                <li><a href="#servicos">SERVIÇOS</a></li>
                 <li><a href="#galeria">GALERIA</a></li>
                 <li><a href="#contato">FALE CONOSCO</a></li>
             </ul>
@@ -47,6 +48,11 @@
         <div class="sobre-imagem-grande">
             <img src="../Imagens/hotel-piscina.jpg" alt="Piscina do Hotel">
         </div>
+        <div class="acessibilidade">
+    <button onclick="alternarTema()">🌙 Tema</button>
+    <button onclick="aumentarFonte()">A+</button>
+    <button onclick="diminuirFonte()">A-</button>
+</div>
     </section>
 
     <!-- SEÇÃO ACOMODAÇÕES -->
@@ -85,8 +91,8 @@
 
             <div class="suite-card">
                 <div class="suite-imagem">
-                    <a href="suite imperial/quarto_imperial.html" alt="Suite Refúgio Imperial">
-                        <img src="../Imagens/quarto_principal.jpg" alt="Suite Refúgio Imperial">
+                    <a href="suite%20imperial/quarto_imperial.html" onclick="return verificarLogin(event)">
+                        <img src="../Imagens/quarto_principal_imperial.jpg" alt="Suite Imperial">
                     
                 </div>
                 <div class="suite-info">
@@ -102,8 +108,8 @@
 
             <div class="suite-card">
                 <div class="suite-imagem">
-                    <a href = 'suite palacio/suite-palacio.html'>
-                    <img src="Imagens/suitepalacio1.jpg" alt="Suite palacio">
+                    <a href="suite%20palacio/suite-palacio.html" onclick="return verificarLogin(event)">
+                    <img src="../Imagens/quarto_principal_palacio.jpg" alt="Suite palacio">
                 </div>
                 <div class="suite-info">
                     <h3>Suite Castelo Queen</h3>
@@ -280,5 +286,24 @@
     <footer class="footer">
         <p>&copy; 2024 Nome do Hotel. Todos os direitos reservados.</p>
     </footer>
+    <script>
+     function verificarLogin(event) {
+
+    const usuario = localStorage.getItem("hotelUser");
+
+    if (!usuario) {
+        event.preventDefault();
+
+        alert("Você precisa fazer cadastro/login para acessar as suítes.");
+
+        window.location.href = "formulario/cadastro.html";
+
+        return false;
+    }
+
+    return true;
+}
+</script>
+<script src="js/acessibilidade.js"></script>
 </body>
 </html>
