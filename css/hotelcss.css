@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#fundo_hotel{
-position: absolute;
-width: 100%;
-height: 100%;
+#fundo_hotel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 :root {
@@ -17,17 +19,16 @@ height: 100%;
     --cor-claro: #f5f1ed;
     --cor-branco: #ffffff;
     --cor-azul: #4a9fb5;
-    --fonte-principal: 'Poppins', 'Georgia', serif;
-    --fonte-secundaria: 'Lato', sans-serif;
-
+    --fonte-principal: 'Playfair Display', Georgia, serif;
+    --fonte-secundaria: 'Inter', 'Segoe UI', sans-serif;
 
     .dark-mode {
-    --cor-primaria: #000000;
-    --cor-secundaria: #2b2b2b;
-    --cor-destaque: #d4a574;
-    --cor-claro: #121212;
-    --cor-branco: #ffffff;
-}
+        --cor-primaria: #000000;
+        --cor-secundaria: #2b2b2b;
+        --cor-destaque: #d4a574;
+        --cor-claro: #121212;
+        --cor-branco: #ffffff;
+    }
 }
 
 html {
@@ -36,8 +37,19 @@ html {
 
 body {
     font-family: var(--fonte-secundaria);
-    color: #555;
-    line-height: 1.6;
+    color: #333;
+    line-height: 1.75;
+    font-size: 16px;
+    background: #faf7f1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-primaria);
+}
+
+p, li {
+    color: #444;
 }
 
 /* ============ NAVBAR ============ */
@@ -155,19 +167,32 @@ body {
 .label {
     display: inline-block;
     color: var(--cor-destaque);
-    font-size: 12px;
-    letter-spacing: 2.5px;
-    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 700;
     margin-bottom: 15px;
 }
 
-.sobre-texto h2 {
+.sobre-texto h2,
+.acomodacoes h2,
+.galeria h2,
+.equipe-box h3 {
     font-family: var(--fonte-principal);
-    font-size: 48px;
     color: var(--cor-secundaria);
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.contato-card h3 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-branco);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.sobre-texto h2 {
+    font-size: 48px;
     margin-bottom: 30px;
-    line-height: 1.2;
 }
 
 .sobre-texto p {
@@ -244,6 +269,20 @@ body {
 .suite-card:hover {
     box-shadow: 0 10px 30px rgba(139, 90, 43, 0.2);
     transform: translateY(-5px);
+}
+
+.suite-card.suite-destaque,
+.suite-card.suite-brisa {
+    border-color: var(--cor-secundaria);
+    background: var(--cor-branco);
+}
+
+.suite-card.suite-brisa .suite-info h3 {
+    color: var(--cor-secundaria);
+}
+
+.suite-card.suite-brisa:hover {
+    box-shadow: 0 10px 30px rgba(139, 90, 43, 0.2);
 }
 
 .suite-imagem {
@@ -352,13 +391,6 @@ a{
     transform: translateY(-5px);
 }
 
-.servico-item .icone {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 15px;
-    stroke-width: 2;
-}
-
 .servico-item h3 {
     font-size: 16px;
     font-weight: 600;
@@ -436,7 +468,8 @@ a{
 
 .galeria-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(2, minmax(220px, 1fr));
     gap: 20px;
     max-width: 1300px;
     margin: 0 auto;
@@ -444,23 +477,18 @@ a{
 
 .galeria-item {
     overflow: hidden;
-    border-radius: 5px;
-    aspect-ratio: 1;
+    border-radius: 10px;
     cursor: pointer;
 }
 
-.galeria-item-1,
-.galeria-item-2 {
-    grid-column: span 1;
+.galeria-item-1 {
+    grid-row: span 2;
 }
 
-.galeria-item-3 {
-    grid-column: span 2;
-    aspect-ratio: 2;
-}
-
+.galeria-item-2,
+.galeria-item-3,
 .galeria-item-4 {
-    grid-column: span 1;
+    aspect-ratio: 1.2;
 }
 
 .galeria-item img {
@@ -583,12 +611,6 @@ a{
     background: var(--cor-destaque);
     border-color: var(--cor-destaque);
     color: var(--cor-secundaria);
-}
-
-.rede-icon svg {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
 }
 
 .btn-fotos {
