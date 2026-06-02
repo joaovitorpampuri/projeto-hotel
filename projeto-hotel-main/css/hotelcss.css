@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#fundo_hotel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --cor-primaria: #1a1a1a;
+    --cor-secundaria: #8b5a2b;
+    --cor-destaque: #d4a574;
+    --cor-claro: #f5f1ed;
+    --cor-branco: #ffffff;
+    --cor-azul: #4a9fb5;
+    --fonte-principal: 'Playfair Display', Georgia, serif;
+    --fonte-secundaria: 'Inter', 'Segoe UI', sans-serif;
+
+    .dark-mode {
+        --cor-primaria: #000000;
+        --cor-secundaria: #2b2b2b;
+        --cor-destaque: #d4a574;
+        --cor-claro: #121212;
+        --cor-branco: #ffffff;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-secundaria);
+    color: #333;
+    line-height: 1.75;
+    font-size: 16px;
+    background: #faf7f1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-primaria);
+}
+
+p, li {
+    color: #444;
+}
+
+/* ============ NAVBAR ============ */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../Imagens/hero-background.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo h1 {
+    color: var(--cor-branco);
+    font-size: 28px;
+    font-family: var(--fonte-principal);
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-menu a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cor-destaque);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* ============ HERO CONTENT ============ */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 80px;
+    color: var(--cor-branco);
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.btn-reservar {
+    background: var(--cor-branco);
+    color: var(--cor-secundaria);
+    padding: 15px 50px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-reservar:hover {
+    background: var(--cor-destaque);
+    color: var(--cor-branco);
+    transform: translatey(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ============ SEÇÃO SOBRE ============ */
+.sobre {
+    padding: 80px 50px;
+    background: var(--cor-claro);
+}
+
+.sobre-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+}
+
+.label {
+    display: inline-block;
+    color: var(--cor-destaque);
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.sobre-texto h2,
+.acomodacoes h2,
+.galeria h2,
+.equipe-box h3 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.contato-card h3 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-branco);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.sobre-texto h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.sobre-texto p {
+    color: var(--cor-secundaria);
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.sobre-imagem-pequena {
+    width: 100%;
+}
+
+.sobre-imagem-pequena img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.sobre-imagem-grande {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-imagem-grande img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 3px solid var(--cor-secundaria);
+    border-radius: 5px;
+}
+
+/* ============ SEÇÃO ACOMODAÇÕES ============ */
+.acomodacoes {
+    padding: 80px 50px;
+    background: var(--cor-claro);
+}
+
+.acomodacoes h2 {
+    font-family: var(--fonte-principal);
+    font-size: 48px;
+    color: var(--cor-secundaria);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.acomodacoes-descricao {
+    text-align: center;
+    color: var(--cor-secundaria);
+    max-width: 900px;
+    margin: 0 auto 60px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.acomodacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.suite-card {
+    border: 2px solid var(--cor-secundaria);
+    background: var(--cor-branco);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.suite-card:hover {
+    box-shadow: 0 10px 30px rgba(139, 90, 43, 0.2);
+    transform: translateY(-5px);
+}
+
+.suite-card.suite-destaque,
+.suite-card.suite-brisa {
+    border-color: var(--cor-secundaria);
+    background: var(--cor-branco);
+}
+
+.suite-card.suite-brisa .suite-info h3 {
+    color: var(--cor-secundaria);
+}
+
+.suite-card.suite-brisa:hover {
+    box-shadow: 0 10px 30px rgba(139, 90, 43, 0.2);
+}
+
+.suite-imagem {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.suite-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.suite-card:hover .suite-imagem img {
+    transform: scale(1.05);
+}
+
+.suite-info {
+    padding: 30px;
+}
+
+.suite-info h3 {
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.suite-info p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.suite-capacidade {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.suite-capacidade p {
+    color: var(--cor-secundaria);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.suite-capacidade .preco {
+    color: var(--cor-secundaria);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* ============ SEÇÃO SERVIÇOS ============ */
+.servicos {
+    background: linear-gradient(rgba(139, 90, 43, 0.7), rgba(139, 90, 43, 0.7)),
+                url('../Imagens/servicos-bg.jpg') center/cover no-repeat;
+    padding: 80px 50px;
+    color: var(--cor-branco);
+}
+
+.servicos h2 {
+    font-family: var(--fonte-principal);
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 80px;
+    font-weight: 400;
+}
+
+.servicos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.servicos-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.servico-item {
+    background: rgba(212, 165, 116, 0.3);
+    padding: 25px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.servico-item:hover {
+    background: rgba(212, 165, 116, 0.5);
+    transform: translateY(-5px);
+}
+
+.servico-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.equipe-box {
+    background: rgba(212, 165, 116, 0.2);
+    padding: 40px;
+    border-radius: 5px;
+}
+
+.equipe-box .label {
+    color: var(--cor-destaque);
+}
+
+.equipe-box h3 {
+    font-family: var(--fonte-principal);
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.equipe-box p {
+    color: var(--cor-branco);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.equipe-imagem {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.equipe-imagem img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* ============ SEÇÃO GALERIA ============ */
+.galeria {
+    padding: 80px 50px;
+    background: var(--cor-claro);
+    text-align: center;
+}
+
+.galeria .label {
+    display: block;
+    color: var(--cor-destaque);
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.galeria h2 {
+    font-family: var(--fonte-principal);
+    font-size: 48px;
+    color: var(--cor-secundaria);
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.galeria-descricao {
+    color: var(--cor-secundaria);
+    max-width: 700px;
+    margin: 0 auto 60px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(2, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.galeria-item {
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.galeria-item-1 {
+    grid-row: span 2;
+}
+
+.galeria-item-2,
+.galeria-item-3,
+.galeria-item-4 {
+    aspect-ratio: 1.2;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.1);
+}
+
+/* ============ SEÇÃO CONTATO ============ */
+.contato {
+    background: linear-gradient(135deg, #6b4423 0%, #8b5a2b 100%);
+    padding: 80px 50px;
+    color: var(--cor-branco);
+    text-align: center;
+}
+
+.contato .label {
+    color: var(--cor-destaque);
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.contato h2 {
+    font-family: var(--fonte-principal);
+    font-size: 48px;
+    margin-bottom: 80px;
+    font-weight: 400;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.contato-card {
+    border: 2px solid rgba(212, 165, 116, 0.5);
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contato-card:hover {
+    border-color: var(--cor-destaque);
+    background: rgba(212, 165, 116, 0.1);
+}
+
+.contato-card h3 {
+    font-family: var(--fonte-principal);
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.contato-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.icone-contato {
+    font-size: 24px;
+    min-width: 30px;
+}
+
+.contato-item p {
+    color: var(--cor-branco);
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.horario-grupo {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.horario-grupo p {
+    color: var(--cor-branco);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.horario-grupo p strong {
+    color: var(--cor-destaque);
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.rede-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-branco);
+    border: 2px solid rgba(212, 165, 116, 0.5);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.rede-icon:hover {
+    background: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+    color: var(--cor-secundaria);
+}
+
+.btn-fotos {
+    background: transparent;
+    color: var(--cor-destaque);
+    border: 2px solid var(--cor-destaque);
+    padding: 12px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn-fotos:hover {
+    background: var(--cor-destaque);
+    color: var(--cor-secundaria);
+}
+
+/* ============ FOOTER ============ */
+.footer {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 30px 50px;
+    font-size: 14px;
+}
+
+/* ============ RESPONSIVIDADE  ============ */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+    }
+
+    .sobre-container {
+        grid-template-columns: 1fr;
+    }
+
+    .acomodacoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .servicos-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-item-3 {
+        grid-column: span 1;
+        aspect-ratio: 1;
+    }
+
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .sobre,
+    .acomodacoes,
+    .servicos,
+    .galeria,
+    .contato {
+        padding: 60px 20px;
+    }
+
+    .sobre-container,
+    .contato-grid {
+        gap: 30px;
+    }
+
+    h2 {
+        font-size: 36px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .acomodacoes-grid,
+    .servicos-lista,
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre,
+    .acomodacoes,
+    .servicos,
+    .galeria,
+    .contato {
+        padding: 40px 15px;
+    }
+}
+
+.dark-mode body {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .suite-card {
+    background: #222;
+}
+
+.dark-mode .suite-info p {
+    color: #ddd;
+}
+
+.dark-mode .sobre,
+.dark-mode .acomodacoes,
+.dark-mode .galeria {
+    background: #121212;
+}
+
+.dark-mode .sobre-texto p,
+.dark-mode .acomodacoes-descricao,
+.dark-mode .galeria-descricao {
+    color: #ddd;
+}
+
+.dark-mode .sobre-texto h2,
+.dark-mode .acomodacoes h2,
+.dark-mode .galeria h2,
+.dark-mode .suite-info h3 {
+    color: white;
+}
