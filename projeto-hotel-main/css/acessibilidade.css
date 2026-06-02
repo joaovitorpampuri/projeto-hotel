@@ -1,0 +1,74 @@
+.acessibilidade {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    gap: 10px;
+}
+
+.acessibilidade button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #c9a96e;
+    color: white;
+    font-family: var(--fonte-secundaria);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.acessibilidade button:hover {
+    transform: translateY(-1px);
+    background: #b4915d;
+}
+
+.dark-mode {
+    background: #121212;
+    color: #f1f1f1;
+    font-family: var(--fonte-secundaria);
+}
+
+.dark-mode .cadastro-container,
+.dark-mode .contato-card {
+    background: #222;
+    color: #f1f1f1;
+}
+
+.dark-mode input {
+    background: #333;
+    color: #f1f1f1;
+    border: 1px solid #666;
+}
+
+.dark-mode .suite,
+.dark-mode .galeria,
+.dark-mode .contato,
+.dark-mode .footer {
+    background: #1e1e1e !important;
+    color: #f1f1f1 !important;
+}
+
+.dark-mode .texto,
+.dark-mode p,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode li {
+    color: #f1f1f1 !important;
+}
+
+.dark-mode .contato-card {
+    background: #2a2a2a;
+    border-color: #555;
+}
+
+.dark-mode .btn,
+.dark-mode .btn-reservar,
+.dark-mode .btn-fotos {
+    background: #444;
+    color: white;
+}
