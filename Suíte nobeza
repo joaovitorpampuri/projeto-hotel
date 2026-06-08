@@ -1,0 +1,138 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suíte Presidencial Luxuosa</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+header{
+    background:linear-gradient(to right,#1b1b1b,#3a2b1f);
+    text-align:center;
+    padding:40px;
+}
+
+header h1{
+    font-size:3rem;
+    color:#d4af37;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:30px 0;
+}
+
+.section{
+    background:#1c1c1c;
+    margin-bottom:30px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(212,175,55,.3);
+}
+
+.section img{
+    width:100%;
+    display:block;
+}
+
+.content{
+    padding:25px;
+}
+
+.content h2{
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.8;
+    color:#ddd;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    color:#999;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Suíte Luxuosa Premium</h1>
+    <p>Conforto, sofisticação e exclusividade.</p>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <img src="sala.jpg" alt="Sala Luxuosa">
+        <div class="content">
+            <h2>Sala de Estar</h2>
+            <p>
+                Ambiente elegante com lustre de cristal,
+                móveis sofisticados, iluminação aconchegante
+                e acabamento em madeira nobre.
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="quarto.jpg" alt="Quarto Luxuoso">
+        <div class="content">
+            <h2>Suíte Master</h2>
+            <p>
+                Cama king-size, decoração refinada,
+                poltronas exclusivas e iluminação
+                projetada para máximo conforto.
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="escritorio.jpg" alt="Escritório Luxuoso">
+        <div class="content">
+            <h2>Escritório Executivo</h2>
+            <p>
+                Espaço ideal para trabalho e reuniões,
+                com biblioteca iluminada e móveis
+                de alto padrão.
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="banheiro.jpg" alt="Banheiro Luxuoso">
+        <div class="content">
+            <h2>Banheiro Premium</h2>
+            <p>
+                Revestimento em mármore escuro,
+                box de vidro, banheira e acabamento
+                dourado para um toque de exclusividade.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Suíte Luxuosa Premium
+</footer>
+
+</body>
+</html>
