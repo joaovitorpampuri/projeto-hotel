@@ -39,7 +39,7 @@ body {
     font-family: var(--fonte-secundaria);
     color: #333;
     line-height: 1.75;
-    font-size: 16px;
+    font-size: 1rem;
     background: #faf7f1;
 }
 
@@ -73,7 +73,7 @@ p, li {
 
 .logo h1 {
     color: var(--cor-branco);
-    font-size: 28px;
+    font-size: 1.75rem;
     font-family: var(--fonte-principal);
     font-weight: 300;
     line-height: 1.2;
@@ -88,7 +88,7 @@ p, li {
 .nav-menu a {
     color: var(--cor-branco);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 1.5px;
     transition: color 0.3s ease;
@@ -121,7 +121,7 @@ p, li {
 }
 
 .hero h2 {
-    font-size: 80px;
+    font-size: 5.0rem;
     color: var(--cor-branco);
     font-family: var(--fonte-principal);
     font-weight: 400;
@@ -134,7 +134,7 @@ p, li {
     color: var(--cor-secundaria);
     padding: 15px 50px;
     border: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 2px;
     cursor: pointer;
@@ -167,7 +167,7 @@ p, li {
 .label {
     display: inline-block;
     color: var(--cor-destaque);
-    font-size: 13px;
+    font-size: 0.8125rem;
     letter-spacing: 2px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -191,13 +191,13 @@ p, li {
 }
 
 .sobre-texto h2 {
-    font-size: 48px;
+    font-size: 3.0rem;
     margin-bottom: 30px;
 }
 
 .sobre-texto p {
     color: var(--cor-secundaria);
-    font-size: 15px;
+    font-size: 0.9375rem;
     margin-bottom: 20px;
     line-height: 1.8;
     text-align: justify;
@@ -235,7 +235,7 @@ p, li {
 
 .acomodacoes h2 {
     font-family: var(--fonte-principal);
-    font-size: 48px;
+    font-size: 3.0rem;
     color: var(--cor-secundaria);
     text-align: center;
     margin-bottom: 30px;
@@ -247,7 +247,7 @@ p, li {
     color: var(--cor-secundaria);
     max-width: 900px;
     margin: 0 auto 60px;
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 1.8;
 }
 
@@ -308,7 +308,7 @@ p, li {
 
 .suite-info h3 {
     font-family: var(--fonte-principal);
-    font-size: 20px;
+    font-size: 1.25rem;
     color: var(--cor-secundaria);
     margin-bottom: 15px;
     font-weight: 400;
@@ -316,7 +316,7 @@ p, li {
 
 .suite-info p {
     color: #777;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.7;
     margin-bottom: 20px;
 }
@@ -332,14 +332,14 @@ a{
 
 .suite-capacidade p {
     color: var(--cor-secundaria);
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-bottom: 10px;
 }
 
 .suite-capacidade .preco {
     color: var(--cor-secundaria);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.0rem;
 }
 
 /* ============ SEÇÃO SERVIÇOS ============ */
@@ -352,7 +352,7 @@ a{
 
 .servicos h2 {
     font-family: var(--fonte-principal);
-    font-size: 48px;
+    font-size: 3.0rem;
     text-align: center;
     margin-bottom: 80px;
     font-weight: 400;
@@ -392,7 +392,7 @@ a{
 }
 
 .servico-item h3 {
-    font-size: 16px;
+    font-size: 1.0rem;
     font-weight: 600;
 }
 
@@ -408,7 +408,7 @@ a{
 
 .equipe-box h3 {
     font-family: var(--fonte-principal);
-    font-size: 36px;
+    font-size: 2.25rem;
     margin-bottom: 20px;
     font-weight: 400;
     letter-spacing: 2px;
@@ -416,7 +416,7 @@ a{
 
 .equipe-box p {
     color: var(--cor-branco);
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.8;
     margin-bottom: 30px;
     text-align: justify;
@@ -444,7 +444,7 @@ a{
 .galeria .label {
     display: block;
     color: var(--cor-destaque);
-    font-size: 12px;
+    font-size: 0.75rem;
     letter-spacing: 2.5px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -452,7 +452,7 @@ a{
 
 .galeria h2 {
     font-family: var(--fonte-principal);
-    font-size: 48px;
+    font-size: 3.0rem;
     color: var(--cor-secundaria);
     margin-bottom: 30px;
     font-weight: 400;
@@ -462,7 +462,7 @@ a{
     color: var(--cor-secundaria);
     max-width: 700px;
     margin: 0 auto 60px;
-    font-size: 15px;
+    font-size: 0.9375rem;
     line-height: 1.8;
 }
 
@@ -512,7 +512,7 @@ a{
 
 .contato .label {
     color: var(--cor-destaque);
-    font-size: 12px;
+    font-size: 0.75rem;
     letter-spacing: 2.5px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -521,7 +521,7 @@ a{
 
 .contato h2 {
     font-family: var(--fonte-principal);
-    font-size: 48px;
+    font-size: 3.0rem;
     margin-bottom: 80px;
     font-weight: 400;
 }
@@ -549,7 +549,7 @@ a{
 
 .contato-card h3 {
     font-family: var(--fonte-principal);
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 30px;
     font-weight: 400;
 }
@@ -562,13 +562,13 @@ a{
 }
 
 .icone-contato {
-    font-size: 24px;
+    font-size: 1.5rem;
     min-width: 30px;
 }
 
 .contato-item p {
     color: var(--cor-branco);
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.6;
     text-align: left;
 }
@@ -580,7 +580,7 @@ a{
 
 .horario-grupo p {
     color: var(--cor-branco);
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-bottom: 5px;
 }
 
@@ -618,7 +618,7 @@ a{
     color: var(--cor-destaque);
     border: 2px solid var(--cor-destaque);
     padding: 12px 40px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
     cursor: pointer;
     border-radius: 25px;
@@ -637,7 +637,7 @@ a{
     color: var(--cor-branco);
     text-align: center;
     padding: 30px 50px;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 /* ============ RESPONSIVIDADE  ============ */
@@ -654,7 +654,7 @@ a{
     }
 
     .hero h2 {
-        font-size: 48px;
+        font-size: 3.0rem;
     }
 
     .sobre-container {
@@ -704,17 +704,17 @@ a{
     }
 
     h2 {
-        font-size: 36px !important;
+        font-size: 2.25rem !important;
     }
 }
 
 @media (max-width: 480px) {
     .hero h2 {
-        font-size: 36px;
+        font-size: 2.25rem;
     }
 
     .logo h1 {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .nav-menu {
@@ -722,7 +722,7 @@ a{
     }
 
     .nav-menu a {
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
     .acomodacoes-grid,

@@ -1,54 +1,60 @@
 .acessibilidade {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 6px;
+    margin-left: 24px;
 }
 
 .acessibilidade button {
-    padding: 10px 14px;
-    border: none;
-    border-radius: 8px;
+    padding: 7px 13px;
+    border: 1px solid rgba(201, 169, 110, 0.5);
+    border-radius: 6px;
     cursor: pointer;
-    background: #c9a96e;
-    color: white;
-    font-family: var(--fonte-secundaria);
-    font-size: 14px;
+    background: transparent;
+    color: #c9a96e;
+    font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.4px;
-    transition: transform 0.2s ease, background 0.2s ease;
+    letter-spacing: 0.5px;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .acessibilidade button:hover {
-    transform: translateY(-1px);
-    background: #b4915d;
+    background: rgba(201, 169, 110, 0.15);
+    border-color: #c9a96e;
+    color: #e0bc85;
 }
+
+/* ============ DARK MODE ============ */
 
 .dark-mode {
     background: #121212;
     color: #f1f1f1;
-    font-family: var(--fonte-secundaria);
 }
 
-.dark-mode .cadastro-container,
-.dark-mode .contato-card {
-    background: #222;
-    color: #f1f1f1;
+.dark-mode .navbar {
+    background: rgba(18, 18, 18, 0.97) !important;
 }
 
-.dark-mode input {
-    background: #333;
-    color: #f1f1f1;
-    border: 1px solid #666;
+.dark-mode .sobre,
+.dark-mode .acomodacoes,
+.dark-mode .servicos {
+    background: #181818 !important;
+    color: #f1f1f1 !important;
 }
 
 .dark-mode .suite,
-.dark-mode .galeria,
-.dark-mode .contato,
-.dark-mode .footer {
+.dark-mode .galeria {
     background: #1e1e1e !important;
+    color: #f1f1f1 !important;
+}
+
+.dark-mode .contato {
+    background: linear-gradient(135deg, #1a0e06 0%, #2a1a0a 100%) !important;
+    color: #f1f1f1 !important;
+}
+
+.dark-mode .footer {
+    background: #0d0d0d !important;
     color: #f1f1f1 !important;
 }
 
@@ -61,14 +67,54 @@
     color: #f1f1f1 !important;
 }
 
+.dark-mode .suite-card {
+    background: #222 !important;
+    color: #f1f1f1 !important;
+}
+
+.dark-mode .suite-info h3,
+.dark-mode .suite-info p {
+    color: #f1f1f1 !important;
+}
+
+.dark-mode .cadastro-container,
 .dark-mode .contato-card {
     background: #2a2a2a;
-    border-color: #555;
+    color: #f1f1f1;
+    border-color: rgba(201, 169, 110, 0.3);
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+    background: #333;
+    color: #f1f1f1;
+    border: 1px solid #555;
 }
 
 .dark-mode .btn,
 .dark-mode .btn-reservar,
 .dark-mode .btn-fotos {
-    background: #444;
-    color: white;
+    background: #3a3a3a;
+    color: #c9a96e;
+    border-color: #c9a96e;
+}
+
+.dark-mode .equipe-box {
+    background: #222 !important;
+    color: #f1f1f1 !important;
+}
+
+.dark-mode .servico-item h3 {
+    color: #f1f1f1 !important;
+}
+
+/* ============ RESPONSIVO ============ */
+
+@media (max-width: 900px) {
+    .acessibilidade {
+        margin-left: 0;
+        margin-top: 12px;
+        justify-content: center;
+    }
 }

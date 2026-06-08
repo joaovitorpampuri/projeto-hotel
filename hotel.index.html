@@ -22,6 +22,11 @@
                 <li><a href="#galeria">GALERIA</a></li>
                 <li><a href="#contato">FALE CONOSCO</a></li>
             </ul>
+            <div class="acessibilidade">
+                <button id="btn-tema" onclick="alternarTema()" title="Alternar tema">🌙</button>
+                <button onclick="aumentarFonte()" title="Aumentar fonte">A+</button>
+                <button onclick="diminuirFonte()" title="Diminuir fonte">A-</button>
+            </div>
         </nav>
         
         <div class="hero-content">
@@ -48,11 +53,7 @@
         <div class="sobre-imagem-grande">
             <img src="Imagens/Piscina.png" alt="Piscina do Hotel">
         </div>
-        <div class="acessibilidade">
-            <button onclick="alternarTema()">🌙 Tema</button>
-            <button onclick="aumentarFonte()">A+</button>
-            <button onclick="diminuirFonte()">A-</button>
-        </div>
+
     </section>
 
     <!-- SEÇÃO ACOMODAÇÕES -->
@@ -79,7 +80,9 @@
 
             <div class="suite-card suite-brisa">
                 <div class="suite-imagem">
-                    <img src="Imagens/suite2.jpg" alt="Suite Brisa Nobre">
+                    <a href="brisa_nobre/suite_nobreza.html" onclick="return verificarLogin(event)">
+                        <img src="Imagens/suite2.jpg" alt="Suite Brisa Nobre">
+                    </a>
                 </div>
                 <div class="suite-info">
                     <h3>Suite Brisa Nobre</h3>
