@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suíte Brisa Nobre</title>
     <link rel="stylesheet" href="../css/hotelcss.css">
     <link rel="stylesheet" href="../css/suite-detail.css">
+    <link rel="stylesheet" href="../css/reserva.css">
 </head>
-<body>
 
+<body>
     <script>
         const usuario = localStorage.getItem("hotelUser");
         if (!usuario) {
@@ -17,46 +19,55 @@
         }
     </script>
 
-    <!-- HERO -->
     <section class="hero-suite">
         <div class="hero-content">
             <h1>Suíte Brisa Nobre</h1>
-            <button class="btn-reservar">RESERVAR</button>
+            <button class="btn-reservar" onclick="abrirReserva()">RESERVAR</button>
         </div>
     </section>
 
-    <!-- DESCRIÇÃO PRINCIPAL -->
     <section class="suite">
         <img src="imagens/Quarto.jpg" alt="Suíte Brisa Nobre">
         <div class="texto">
             <h2>Suíte Brisa Nobre</h2>
 
             <p>
-                A Suíte Brisa Nobre foi projetada para hóspedes que apreciam elegância clássica e conforto refinado. Com ambientes integrados e decoração inspirada em residências aristocráticas europeias, cada detalhe foi cuidadosamente pensado para proporcionar uma estadia verdadeiramente especial.
+                A Suíte Brisa Nobre foi projetada para hóspedes que apreciam elegância clássica e conforto refinado.
+                Com ambientes integrados e decoração inspirada em residências aristocráticas europeias, cada detalhe
+                foi cuidadosamente pensado para proporcionar uma estadia verdadeiramente especial.
             </p>
 
             <p>
                 <strong>Sala de Estar</strong><br>
-                O ambiente de estar da suíte impressiona com seu lustre de cristal, móveis sofisticados em madeira nobre e iluminação aconchegante projetada para criar atmosferas distintas ao longo do dia. Poltronas estofadas e mesa de centro compõem um espaço de descanso e convívio de alto padrão.
+                O ambiente de estar da suíte impressiona com seu lustre de cristal, móveis sofisticados em madeira
+                nobre e iluminação aconchegante projetada para criar atmosferas distintas ao longo do dia.
+                Poltronas estofadas e mesa de centro compõem um espaço de descanso e convívio de alto padrão.
             </p>
 
             <p>
                 <strong>Suíte Master</strong><br>
-                O quarto principal abriga uma cama king-size com enxoval premium, travesseiros de plumas e cabeceira estofada com detalhes dourados. Poltronas exclusivas, TV de grande formato e piso em madeira nobre completam o ambiente com requinte e sofisticação.
+                O quarto principal abriga uma cama king-size com enxoval premium, travesseiros de plumas e cabeceira
+                estofada com detalhes dourados. Poltronas exclusivas, TV de grande formato e piso em madeira nobre
+                completam o ambiente com requinte e sofisticação.
             </p>
 
             <p>
                 <strong>Escritório Executivo</strong><br>
-                Para os hóspedes que precisam aliar conforto e produtividade, a suíte conta com um escritório executivo completo: mesa ampla em madeira de alto padrão, biblioteca iluminada e cadeira estofada. O espaço oferece privacidade e ambiente ideal para reuniões ou trabalho remoto.
+                Para os hóspedes que precisam aliar conforto e produtividade, a suíte conta com um escritório
+                executivo completo: mesa ampla em madeira de alto padrão, biblioteca iluminada e cadeira estofada.
+                O espaço oferece privacidade e ambiente ideal para reuniões ou trabalho remoto.
             </p>
 
             <p>
                 <strong>Banheiro Premium</strong><br>
-                O banheiro é um convite ao relaxamento. Revestido em mármore escuro do piso ao teto, conta com banheira de imersão, box de vidro temperado, acabamento dourado e produtos de banho exclusivos. Cada detalhe reflete o padrão de excelência da suíte.
+                O banheiro é um convite ao relaxamento. Revestido em mármore escuro do piso ao teto, conta com
+                banheira de imersão, box de vidro temperado, acabamento dourado e produtos de banho exclusivos.
             </p>
 
             <p>
-                A Suíte Brisa Nobre representa o primeiro nível de hospedagem premium do hotel, unindo espaço generoso, elegância atemporal e uma experiência inesquecível para hóspedes que buscam o melhor em cada detalhe.
+                A Suíte Brisa Nobre representa o primeiro nível de hospedagem premium do hotel, unindo espaço
+                generoso, elegância atemporal e uma experiência inesquecível para hóspedes que buscam o melhor
+                em cada detalhe.
             </p>
 
             <ul class="lista">
@@ -90,11 +101,12 @@
                 </li>
             </ul>
 
-            <p class="preco">a partir de R$ 210,00</p>
+            <p class="preco">a partir de R$ 210,00 <span class="preco-noite">/ noite</span></p>
+
+            <button class="btn-reservar-texto" onclick="abrirReserva()">RESERVAR AGORA</button>
         </div>
     </section>
 
-    <!-- GALERIA -->
     <section class="galeria">
         <h2>Galeria da Suíte Brisa Nobre</h2>
         <div class="grid-galeria">
@@ -105,14 +117,12 @@
         </div>
     </section>
 
-    <!-- BOTÃO VOLTAR -->
     <div class="voltar">
         <a href="../hotel.index.html">
             <button class="btn">← voltar para o hotel</button>
         </a>
     </div>
 
-    <!-- CONTATO -->
     <section class="contato" id="contato">
         <span class="label">FALE CONOSCO</span>
         <h2>Como Podemos Te Ajudar?</h2>
@@ -164,10 +174,92 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <p>&copy; 2024 Copacabana Palms. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- ===== MODAL DE RESERVA ===== -->
+    <div class="reserva-overlay" id="reservaOverlay" onclick="fecharReservaFora(event)">
+        <div class="reserva-modal">
+
+            <div class="reserva-modal-header">
+                <div>
+                    <h2>Reservar Suíte Brisa Nobre</h2>
+                    <p>Preencha os dados para confirmar sua estadia</p>
+                </div>
+                <button class="reserva-fechar" onclick="fecharReserva()" aria-label="Fechar modal">×</button>
+            </div>
+
+            <div class="reserva-modal-body" id="reservaFormArea">
+
+                <div class="reserva-datas">
+                    <div class="reserva-field">
+                        <label for="checkin">Check-in</label>
+                        <input type="date" id="checkin" onchange="calcularReserva()">
+                    </div>
+                    <div class="reserva-field">
+                        <label for="checkout">Check-out</label>
+                        <input type="date" id="checkout" onchange="calcularReserva()">
+                    </div>
+                </div>
+
+                <div class="reserva-hospedes">
+                    <div class="reserva-field">
+                        <label for="adultos">Adultos</label>
+                        <select id="adultos" onchange="calcularReserva()">
+                            <option value="1">1 adulto</option>
+                            <option value="2" selected>2 adultos</option>
+                        </select>
+                    </div>
+                    <div class="reserva-field">
+                        <label for="criancas">Crianças</label>
+                        <select id="criancas" onchange="calcularReserva()">
+                            <option value="0" selected>Sem crianças</option>
+                            <option value="1">1 criança (até 7 anos)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <p class="reserva-erro" id="reservaErro"></p>
+
+                <div class="reserva-resumo" id="reservaResumo">
+                    <div class="resumo-linha">
+                        <span id="lblNoites">— noites</span>
+                        <span id="lblSubtotal">—</span>
+                    </div>
+                    <div class="resumo-linha" id="linhaServico">
+                        <span>Taxa de serviço (10%)</span>
+                        <span id="lblServico">—</span>
+                    </div>
+                    <div class="resumo-linha resumo-total">
+                        <span>Total</span>
+                        <span id="lblTotal">—</span>
+                    </div>
+                </div>
+
+                <button class="btn-confirmar-reserva" id="btnConfirmar" onclick="confirmarReserva()" disabled>
+                    Confirmar Reserva
+                </button>
+
+            </div>
+
+            <div class="reserva-sucesso" id="reservaSucesso">
+                <div class="sucesso-icone">✓</div>
+                <h3>Reserva Confirmada!</h3>
+                <p id="sucInfo1"></p>
+                <p id="sucInfo2"></p>
+                <p class="sucesso-codigo" id="sucCod"></p>
+                <button class="btn-fechar-sucesso" onclick="fecharReserva()">Fechar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const NOME_SUITE  = "Brisa Nobre";
+        const PRECO_NOITE = 210;
+    </script>
+    <script src="../js/reserva.js"></script>
 </body>
+
 </html>

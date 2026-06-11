@@ -2,209 +2,254 @@
 <html lang="pt-BR">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suíte Encanto Real</title>
+    <link rel="stylesheet" href="../css/hotelcss.css">
+    <link rel="stylesheet" href="../css/suite-detail.css">
+    <link rel="stylesheet" href="../css/reserva.css">
+</head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <script>
+        const usuario = localStorage.getItem("hotelUser");
+        if (!usuario) {
+            alert("Você precisa estar cadastrado para acessar esta suíte.");
+            window.location.href = "../formulario/cadastro.html";
+        }
+    </script>
 
-<title>Suíte Encanto Real</title>
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>Suíte Encanto Real</title>
-
-        <link rel="stylesheet" href="../css/hotelcss.css">
-        <link rel="stylesheet" href="../css/suite-detail.css">
-
-    </head>
-
-    <body>
-        <script>
-            const usuario = localStorage.getItem("hotelUser");
-
-            if (!usuario) {
-                alert("Você precisa estar cadastrado para acessar esta suíte.");
-                window.location.href = "../formulario/cadastro.html";
-            }
-        </script>
-
-        <section class="hero-suite">
-            <div class="hero-content">
-                <h1>Suíte Encanto Real</h1>
-                <button class="btn">RESERVAR</button>
-            </div>
-        </section>
-
-        <section class="suite">
-            <img src="Imagens/Encanto Real1.png">
-
-            <div class="texto">
-                <h2>Experiência Romântica e Encantadora</h2>
-
-                <p>
-                    A Suíte Encanto Real é um refúgio de romance e sofisticação,
-                    com ambiente acolhedor e decoração refinada que evoca o charme de um conto de fadas.
-                    Cada detalhe foi cuidadosamente planejado para proporcionar conforto,
-                    elegância e bem-estar em um espaço íntimo e exclusivo.
-                </p>
-
-                <p>
-                    O quarto possui cama King Size premium, lençóis de alta qualidade,
-                    iluminação suave e acabamento elegante.
-                    A suíte conta ainda com banheira de hidromassagem relaxante,
-                    perfeita para momentos a dois, além de varanda com vista para o jardim.
-                </p>
-
-                <p>
-                    Ideal para casais que buscam uma estadia romântica e memorável,
-                    a Suíte Encanto Real combina charme sofisticado com comodidades modernas,
-                    proporcionando uma experiência inesquecível em um ambiente acolhedor.
-                </p>
-
-                <ul class="lista">
-                    <li>
-                        <img src="../Imagens/cama-de-casal.png" alt="Cama" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-                        Cama King Size premium
-                    </li>
-                    <li>
-                        <img src="../Imagens/piscina icone.png" alt="Hidromassagem" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-                        Hidromassagem
-                    </li>
-                    <li>
-                        <img src="../Imagens/sinal-wifi.png" alt="WiFi" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-                        Wi-fi de alta velocidade
-                    </li>
-                    <li>
-                        <img src="../Imagens/ar-condicionado.png" alt="Ar Condicionado" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-                        Ar condicionado
-                    </li>
-                    <li>
-                        <img src="../Imagens/smart-tv.png" alt="Smart TV" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-                        Smart TV
-                    </li>
-                    <li>
-                        <img src="../Imagens/xicara-de-cafe.png" alt="Café" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-                        Espaço para café
-                    </li>
-                    <li>
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <path d="M4 10h16v8H4z"/>
-                            <path d="M8 10V6h8v4"/>
-                        </svg>
-                        Varanda com vista
-                    </li>
-                    <li>
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="9"/>
-                            <path d="M12 8v4l3 2"/>
-                        </svg>
-                        Vista para jardim
-                    </li>
-                    <li>
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <rect x="6" y="10" width="12" height="10"/>
-                            <path d="M9 10V7a3 3 0 016 0v3"/>
-                        </svg>
-                        Cofre digital
-                    </li>
-                    <li>
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <path d="M4 6h16"/>
-                            <path d="M6 6v12"/>
-                            <path d="M18 6v12"/>
-                        </svg>
-                        Limpeza diária
-                    </li>
-                    <li>
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="9"/>
-                            <path d="M12 7v10"/>
-                        </svg>
-                        Amenities premium
-                    </li>
-                </ul>
-
-                <p class="preco">a partir de R$ 289,00</p>
-            </div>
-        </section>
-
-        <section class="galeria">
-            <h2>Galeria da Suíte</h2>
-
-            <div class="grid-galeria">
-                <img src="Imagens/Encanto Real1.png">
-                <img src="Imagens/Encanto Real2.png">
-                <img src="Imagens/Encanto Real3.png">
-                <img src="Imagens/Encanto Real4.png">
-            </div>
-        </section>
-
-        <div class="voltar">
-            <a href="../hotel.index.html">
-                <button class="btn">← voltar para o hotel</button>
-            </a>
+    <section class="hero-suite">
+        <div class="hero-content">
+            <h1>Suíte Encanto Real</h1>
+            <button class="btn-reservar" onclick="abrirReserva()">RESERVAR</button>
         </div>
+    </section>
 
-        <section class="contato" id="contato">
-            <span class="label">FALE CONOSCO</span>
-            <h2>Como Podemos Te Ajudar?</h2>
+    <section class="suite">
+        <img src="Imagens/Encanto Real1.png" alt="Suíte Encanto Real">
 
-            <div class="contato-grid">
-                <div class="contato-card">
-                    <h3>Contato</h3>
-                    <div class="contato-item">
-                        <span class="icone-contato">📍</span>
-                        <p>AV. Lúcio Costa, 1240. Barra da Tijuca, Rio de Janeiro</p>
-                    </div>
-                    <div class="contato-item">
-                        <span class="icone-contato">📞</span>
-                        <p>(21) 3456-7891</p>
-                    </div>
-                    <div class="contato-item">
-                        <span class="icone-contato">✉️</span>
-                        <p>recepcao@nomedohotel.com.br</p>
-                    </div>
+        <div class="texto">
+            <h2>Experiência Romântica e Encantadora</h2>
+
+            <p>
+                A Suíte Encanto Real é um refúgio de romance e sofisticação,
+                com ambiente acolhedor e decoração refinada que evoca o charme de um conto de fadas.
+                Cada detalhe foi cuidadosamente planejado para proporcionar conforto,
+                elegância e bem-estar em um espaço íntimo e exclusivo.
+            </p>
+
+            <p>
+                O quarto possui cama King Size premium, lençóis de alta qualidade,
+                iluminação suave e acabamento elegante.
+                A suíte conta ainda com banheira de hidromassagem relaxante,
+                perfeita para momentos a dois, além de varanda com vista para o jardim.
+            </p>
+
+            <p>
+                Ideal para casais que buscam uma estadia romântica e memorável,
+                a Suíte Encanto Real combina charme sofisticado com comodidades modernas,
+                proporcionando uma experiência inesquecível em um ambiente acolhedor.
+            </p>
+
+            <ul class="lista">
+                <li>
+                    <img src="../Imagens/cama-de-casal.png" alt="Cama" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Cama King Size premium
+                </li>
+                <li>
+                    <img src="../Imagens/piscina icone.png" alt="Hidromassagem" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Hidromassagem
+                </li>
+                <li>
+                    <img src="../Imagens/sinal-wifi.png" alt="WiFi" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Wi-fi de alta velocidade
+                </li>
+                <li>
+                    <img src="../Imagens/ar-condicionado.png" alt="Ar Condicionado" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Ar condicionado
+                </li>
+                <li>
+                    <img src="../Imagens/smart-tv.png" alt="Smart TV" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Smart TV
+                </li>
+                <li>
+                    <img src="../Imagens/xicara-de-cafe.png" alt="Café" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Espaço para café
+                </li>
+                <li>
+                    <img src="../Imagens/cofre-digital.png" alt="Cofre" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Cofre digital
+                </li>
+                <li>
+                    <img src="../Imagens/limpar-limpo.png" alt="Limpeza" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Limpeza diária
+                </li>
+                <li>
+                    <img src="../Imagens/artigos-de-higiene.png" alt="Amenities" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Amenities premium
+                </li>
+            </ul>
+
+            <p class="preco">a partir de R$ 171,00 <span class="preco-noite">/ noite</span></p>
+
+            <button class="btn-reservar-texto" onclick="abrirReserva()">RESERVAR AGORA</button>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <h2>Galeria da Suíte Encanto Real</h2>
+        <div class="grid-galeria">
+            <img src="Imagens/Encanto Real1.png" alt="Suíte Encanto Real">
+            <img src="Imagens/Encanto Real2.png" alt="Suíte Encanto Real">
+            <img src="Imagens/Encanto Real3.png" alt="Suíte Encanto Real">
+            <img src="Imagens/Encanto Real4.png" alt="Suíte Encanto Real">
+        </div>
+    </section>
+
+    <div class="voltar">
+        <a href="../hotel.index.html">
+            <button class="btn">← voltar para o hotel</button>
+        </a>
+    </div>
+
+    <section class="contato" id="contato">
+        <span class="label">FALE CONOSCO</span>
+        <h2>Como Podemos Te Ajudar?</h2>
+
+        <div class="contato-grid">
+            <div class="contato-card">
+                <h3>Contato</h3>
+                <div class="contato-item">
+                    <span class="icone-contato">📍</span>
+                    <p>AV. Lúcio Costa, 1240. Barra da Tijuca, Rio de Janeiro</p>
                 </div>
-
-                <div class="contato-card">
-                    <h3>Horário</h3>
-                    <div class="horario-grupo">
-                        <p><strong>De Segunda a Sexta</strong></p>
-                        <p>9:00 à 18:00 horas</p>
-                    </div>
-                    <div class="horario-grupo">
-                        <p><strong>Sábado e Domingo</strong></p>
-                        <p>9:00 à 12:00 horas</p>
-                    </div>
+                <div class="contato-item">
+                    <span class="icone-contato">📞</span>
+                    <p>(21) 3456-7891</p>
                 </div>
-
-                <div class="contato-card">
-                    <h3>Nossas Redes Sociais</h3>
-                    <div class="redes-sociais">
-                        <a href="#" class="rede-icon" aria-label="Twitter">
-                            <img src="../Imagens/big-twitter-logo.png" alt="Twitter" style="width:24px;height:24px;display:inline-block;vertical-align:middle">
-                        </a>
-                        <a href="#" class="rede-icon" aria-label="YouTube">
-                            <img src="../Imagens/youtube.png" alt="YouTube" style="width:24px;height:24px;display:inline-block;vertical-align:middle">
-                        </a>
-                        <a href="#" class="rede-icon" aria-label="Instagram">
-                            <img src="../Imagens/instagram.png" alt="Instagram" style="width:24px;height:24px;display:inline-block;vertical-align:middle">
-                        </a>
-                    </div>
-                    <button class="btn-fotos">Marque-nos nas suas fotos</button>
+                <div class="contato-item">
+                    <span class="icone-contato">✉️</span>
+                    <p>recepcao@nomedohotel.com.br</p>
                 </div>
             </div>
-        </section>
 
-        <!-- FOOTER -->
-        <footer class="footer">
-            <p>&copy; 2024 Nome do Hotel. Todos os direitos reservados.</p>
-        </footer>
+            <div class="contato-card">
+                <h3>Horário</h3>
+                <div class="horario-grupo">
+                    <p><strong>De Segunda a Sexta</strong></p>
+                    <p>9:00 à 18:00 horas</p>
+                </div>
+                <div class="horario-grupo">
+                    <p><strong>Sábado e Domingo</strong></p>
+                    <p>9:00 à 12:00 horas</p>
+                </div>
+            </div>
 
-    </body>
+            <div class="contato-card">
+                <h3>Nossas Redes Sociais</h3>
+                <div class="redes-sociais">
+                    <a href="#" class="rede-icon" aria-label="Twitter">
+                        <img src="../Imagens/big-twitter-logo.png" alt="Twitter" style="width:24px;height:24px;display:inline-block;vertical-align:middle">
+                    </a>
+                    <a href="#" class="rede-icon" aria-label="YouTube">
+                        <img src="../Imagens/youtube.png" alt="YouTube" style="width:24px;height:24px;display:inline-block;vertical-align:middle">
+                    </a>
+                    <a href="#" class="rede-icon" aria-label="Instagram">
+                        <img src="../Imagens/instagram.png" alt="Instagram" style="width:24px;height:24px;display:inline-block;vertical-align:middle">
+                    </a>
+                </div>
+                <button class="btn-fotos">Marque-nos nas suas fotos</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Copacabana Palms. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- ===== MODAL DE RESERVA ===== -->
+    <div class="reserva-overlay" id="reservaOverlay" onclick="fecharReservaFora(event)">
+        <div class="reserva-modal">
+
+            <div class="reserva-modal-header">
+                <div>
+                    <h2>Reservar Suíte Encanto Real</h2>
+                    <p>Preencha os dados para confirmar sua estadia</p>
+                </div>
+                <button class="reserva-fechar" onclick="fecharReserva()" aria-label="Fechar modal">×</button>
+            </div>
+
+            <div class="reserva-modal-body" id="reservaFormArea">
+
+                <div class="reserva-datas">
+                    <div class="reserva-field">
+                        <label for="checkin">Check-in</label>
+                        <input type="date" id="checkin" onchange="calcularReserva()">
+                    </div>
+                    <div class="reserva-field">
+                        <label for="checkout">Check-out</label>
+                        <input type="date" id="checkout" onchange="calcularReserva()">
+                    </div>
+                </div>
+
+                <div class="reserva-hospedes">
+                    <div class="reserva-field">
+                        <label for="adultos">Adultos</label>
+                        <select id="adultos" onchange="calcularReserva()">
+                            <option value="1">1 adulto</option>
+                            <option value="2" selected>2 adultos</option>
+                        </select>
+                    </div>
+                    <div class="reserva-field">
+                        <label for="criancas">Crianças</label>
+                        <select id="criancas" onchange="calcularReserva()">
+                            <option value="0" selected>Sem crianças</option>
+                            <option value="1">1 criança (até 7 anos)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <p class="reserva-erro" id="reservaErro"></p>
+
+                <div class="reserva-resumo" id="reservaResumo">
+                    <div class="resumo-linha">
+                        <span id="lblNoites">— noites</span>
+                        <span id="lblSubtotal">—</span>
+                    </div>
+                    <div class="resumo-linha" id="linhaServico">
+                        <span>Taxa de serviço (10%)</span>
+                        <span id="lblServico">—</span>
+                    </div>
+                    <div class="resumo-linha resumo-total">
+                        <span>Total</span>
+                        <span id="lblTotal">—</span>
+                    </div>
+                </div>
+
+                <button class="btn-confirmar-reserva" id="btnConfirmar" onclick="confirmarReserva()" disabled>
+                    Confirmar Reserva
+                </button>
+
+            </div>
+
+            <div class="reserva-sucesso" id="reservaSucesso">
+                <div class="sucesso-icone">✓</div>
+                <h3>Reserva Confirmada!</h3>
+                <p id="sucInfo1"></p>
+                <p id="sucInfo2"></p>
+                <p class="sucesso-codigo" id="sucCod"></p>
+                <button class="btn-fechar-sucesso" onclick="fecharReserva()">Fechar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const NOME_SUITE   = "Encanto Real";
+        const PRECO_NOITE  = 171;
+    </script>
+    <script src="../js/reserva.js"></script>
+</body>
 
 </html>

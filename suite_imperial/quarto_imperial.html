@@ -7,12 +7,12 @@
     <title>Suíte Imperial</title>
     <link rel="stylesheet" href="../css/hotelcss.css">
     <link rel="stylesheet" href="../css/suite-detail.css">
+    <link rel="stylesheet" href="../css/reserva.css">
 </head>
 
 <body>
     <script>
         const usuario = localStorage.getItem("hotelUser");
-
         if (!usuario) {
             alert("Você precisa estar cadastrado para acessar esta suíte.");
             window.location.href = "../formulario/cadastro.html";
@@ -22,137 +22,113 @@
     <section class="hero-suite">
         <div class="hero-content">
             <h1>Suíte Imperial</h1>
-            <button class="btn-reservar">RESERVAR</button>
+            <button class="btn-reservar" onclick="abrirReserva()">RESERVAR</button>
         </div>
     </section>
 
+    <section class="suite">
+        <img src="fotos/quarto_principal.jpg" alt="Suíte Imperial">
+        <div class="texto">
+            <h2>Suíte Imperial</h2>
 
+            <p>
+                A Suíte Imperial foi concebida para hóspedes que exigem o melhor em conforto e sofisticação.
+                Com dois ambientes integrados e decoração inspirada em palácios europeus, cada detalhe foi
+                pensado para proporcionar uma estadia verdadeiramente memorável.
+            </p>
 
+            <p>
+                <strong>Quarto Principal</strong><br>
+                O coração da suíte abriga duas camas de casal premium com enxoval de altíssimo padrão,
+                travesseiros de plumas e cabeceiras estofadas em painel dourado. O teto rebaixado com
+                iluminação embutida cria uma atmosfera aconchegante e elegante, enquanto o piso de madeira
+                nobre e a TV de grande formato completam o ambiente com requinte.
+            </p>
 
-<section class="suite">
-    <img src="fotos/quarto_principal.jpg" alt="Suíte Imperial">
-    <div class="texto">
-        <h2>Suíte Imperial</h2>
+            <p>
+                <strong>Sala de Estar Privativa</strong><br>
+                Um espaço exclusivo de relaxamento com mesa de centro oval em madeira escura, rack de TV
+                sofisticado e arranjos florais frescos. A sala se integra ao quarto através de uma passagem
+                ampla, permitindo que o hóspede transite entre os ambientes com total fluidez e privacidade.
+            </p>
 
+            <p>
+                <strong>Área de Trabalho</strong><br>
+                Para os hóspedes que precisam aliar conforto e produtividade, a suíte conta com uma
+                escrivaninha executiva em madeira nobre, cadeira estofada e luminária de mesa, posicionadas
+                em frente a uma janela do piso ao teto com cortinas blackout.
+            </p>
 
+            <p>
+                <strong>Banheiro de Luxo</strong><br>
+                O banheiro é um spa particular. Revestido em mármore travertino do piso ao teto, conta com
+                bancada em mármore escuro, box de vidro temperado com sistema de ducha completo, toalhas
+                premium e produtos de banho exclusivos.
+            </p>
 
-<p>
-A Suíte Imperial foi concebida para hóspedes que exigem o melhor em conforto e sofisticação. Com dois ambientes integrados e decoração inspirada em palácios europeus, cada detalhe foi pensado para proporcionar uma estadia verdadeiramente memorável.
-</p>
+            <p>
+                A Suíte Imperial representa o segundo mais alto nível de hospedagem do hotel, oferecendo
+                espaço amplo, elegância atemporal e uma experiência de conforto incomparável.
+            </p>
 
+            <ul class="lista">
+                <li>
+                    <img src="../Imagens/cama-de-casal.png" alt="Cama" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Duas camas de casal premium
+                </li>
+                <li>
+                    <img src="../Imagens/sinal-wifi.png" alt="WiFi" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Wi-fi de alta velocidade
+                </li>
+                <li>
+                    <img src="../Imagens/ar-condicionado.png" alt="Ar Condicionado" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Ar condicionado
+                </li>
+                <li>
+                    <img src="../Imagens/smart-tv.png" alt="Smart TV" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Smart TV
+                </li>
+                <li>
+                    <img src="../Imagens/xicara-de-cafe.png" alt="Café" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Espaço para café
+                </li>
+                <li>
+                    <img src="../Imagens/cofre-digital.png" alt="Cofre" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Cofre digital
+                </li>
+                <li>
+                    <img src="../Imagens/limpar-limpo.png" alt="Limpeza" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
+                    Limpeza diária
+                </li>
+            </ul>
 
+            <p class="preco">a partir de R$ 320,00 <span class="preco-noite">/ noite</span></p>
 
-<p>
-Quarto Principal
-O coração da suíte abriga duas camas de casal premium com enxoval de altíssimo padrão, travesseiros de plumas e cabeceiras estofadas em painel dourado. O teto rebaixado com iluminação embutida cria uma atmosfera aconchegante e elegante, enquanto o piso de madeira nobre e a TV de grande formato completam o ambiente com requinte.
-</p>
+            <button class="btn-reservar-texto" onclick="abrirReserva()">RESERVAR AGORA</button>
 
+        </div>
+    </section>
 
+    <section class="galeria">
+        <h2>Galeria da Suíte Imperial</h2>
+        <div class="grid-galeria">
+            <img src="fotos/quarto_principal.jpg" alt="Quarto Imperial">
+            <img src="fotos/escritorio.jpg" alt="Escritório da Suíte Imperial">
+            <img src="fotos/sala_estar.jpg" alt="Sala de Estar da Suíte Imperial">
+            <img src="fotos/banheiro.jpg" alt="Banheiro da Suíte Imperial">
+        </div>
+    </section>
 
-<p>
-
-Sala de Estar Privativa
-Um espaço exclusivo de relaxamento com mesa de centro oval em madeira escura, rack de TV sofisticado e arranjos florais frescos. A sala se integra ao quarto através de uma passagem ampla, permitindo que o hóspede transite entre os ambientes com total fluidez e privacidade.
-
-</p>
-
-<p>
-Área de Trabalho
-Para os hóspedes que precisam aliar conforto e produtividade, a suíte conta com uma escrivaninha executiva em madeira nobre, cadeira estofada e luminária de mesa, posicionadas em frente a uma janela do piso ao teto com cortinas blackout. A bancada lateral acomoda chaleira elétrica, cafeteira e amenities para momentos de descanso.
-</p>
-
-<p>
-Banheiro de Luxo
-O banheiro é um spa particular. Revestido em mármore travertino do piso ao teto, conta com bancada em mármore escuro, box de vidro temperado com sistema de ducha completo, toalhas premium e produtos de banho exclusivos. Cada detalhe reflete o padrão cinco estrelas da suíte.
-</p>
-
-<p>
-    A Suíte Imperial representa o segundo mais alto nível de hospedagem do hotel, oferecendo espaço amplo, elegância atemporal e uma experiência de conforto incomparável para hóspedes que buscam exclusividade.
-</p>
-
-
-<ul class="lista">
-
-<li>
-<img src="../Imagens/cama-de-casal.png" alt="Cama" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-Duas camas de casal premium
-</li>
-
-
-
-
-
-<li>
-<img src="../Imagens/sinal-wifi.png" alt="WiFi" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-Wi-fi de alta velocidade
-</li>
-
-
-<li>
-<img src="../Imagens/ar-condicionado.png" alt="Ar Condicionado" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-Ar condicionado
-</li>
-
-
-<li>
-<img src="../Imagens/smart-tv.png" alt="Smart TV" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-Smart TV
-</li>
-
-
-<li>
-<img src="../Imagens/xicara-de-cafe.png" alt="Café" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-Espaço para café
-</li>
-
-<li>
-<img src="../Imagens/cofre-digital.png" alt="Cofre" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-Cofre digital
-</li>
-
-
-<li>
-<img src="../Imagens/limpar-limpo.png" alt="Limpeza" style="width:18px;height:18px;margin-right:10px;vertical-align:middle">
-Limpeza diária
-</li>
-
-
-</ul>
-
-
-
-<p class="preco">a partir de R$ 320,00</p>
-
-
-
-</div>
-
-</section>
-
-
-
-
-<section class="galeria">
-    <h2>Galeria da Suíte Imperial</h2>
-    <div class="grid-galeria">
-        <img src="fotos/quarto_principal.jpg" alt="Quarto Imperial">
-        <img src="fotos/escritorio.jpg" alt="Escritório da Suíte Imperial">
-        <img src="fotos/sala_estar.jpg" alt="Sala de Estar da Suíte Imperial">
-        <img src="fotos/banheiro.jpg" alt="Banheiro da Suíte Imperial">
+    <div class="voltar">
+        <a href="../hotel.index.html">
+            <button class="btn">← voltar para o hotel</button>
+        </a>
     </div>
 
-</section>
-
-<div class="voltar">
-    <a href="../hotel.index.html">
-        <button class="btn">← voltar para o hotel</button>
-    </a>
-</div>
-
-<section class="contato" id="contato">
+    <section class="contato" id="contato">
         <span class="label">FALE CONOSCO</span>
         <h2>Como Podemos Te Ajudar?</h2>
-        
+
         <div class="contato-grid">
             <div class="contato-card">
                 <h3>Contato</h3>
@@ -200,11 +176,93 @@ Limpeza diária
         </div>
     </section>
 
-
-<footer class="footer">
+    <footer class="footer">
         <p>&copy; 2024 Copacabana Palms. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- ===== MODAL DE RESERVA ===== -->
+    <div class="reserva-overlay" id="reservaOverlay" onclick="fecharReservaFora(event)">
+        <div class="reserva-modal">
+
+            <div class="reserva-modal-header">
+                <div>
+                    <h2>Reservar Suíte Imperial</h2>
+                    <p>Preencha os dados para confirmar sua estadia</p>
+                </div>
+                <button class="reserva-fechar" onclick="fecharReserva()" aria-label="Fechar modal">×</button>
+            </div>
+
+            <div class="reserva-modal-body" id="reservaFormArea">
+
+                <div class="reserva-datas">
+                    <div class="reserva-field">
+                        <label for="checkin">Check-in</label>
+                        <input type="date" id="checkin" onchange="calcularReserva()">
+                    </div>
+                    <div class="reserva-field">
+                        <label for="checkout">Check-out</label>
+                        <input type="date" id="checkout" onchange="calcularReserva()">
+                    </div>
+                </div>
+
+                <div class="reserva-hospedes">
+                    <div class="reserva-field">
+                        <label for="adultos">Adultos</label>
+                        <select id="adultos" onchange="calcularReserva()">
+                            <option value="1">1 adulto</option>
+                            <option value="2" selected>2 adultos</option>
+                        </select>
+                    </div>
+                    <div class="reserva-field">
+                        <label for="criancas">Crianças</label>
+                        <select id="criancas" onchange="calcularReserva()">
+                            <option value="0" selected>Sem crianças</option>
+                            <option value="1">1 criança (até 7 anos)</option>
+                            <option value="2">2 crianças (até 7 anos)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <p class="reserva-erro" id="reservaErro"></p>
+
+                <div class="reserva-resumo" id="reservaResumo">
+                    <div class="resumo-linha">
+                        <span id="lblNoites">— noites</span>
+                        <span id="lblSubtotal">—</span>
+                    </div>
+                    <div class="resumo-linha" id="linhaServico">
+                        <span>Taxa de serviço (10%)</span>
+                        <span id="lblServico">—</span>
+                    </div>
+                    <div class="resumo-linha resumo-total">
+                        <span>Total</span>
+                        <span id="lblTotal">—</span>
+                    </div>
+                </div>
+
+                <button class="btn-confirmar-reserva" id="btnConfirmar" onclick="confirmarReserva()" disabled>
+                    Confirmar Reserva
+                </button>
+
+            </div>
+
+            <div class="reserva-sucesso" id="reservaSucesso">
+                <div class="sucesso-icone">✓</div>
+                <h3>Reserva Confirmada!</h3>
+                <p id="sucInfo1"></p>
+                <p id="sucInfo2"></p>
+                <p class="sucesso-codigo" id="sucCod"></p>
+                <button class="btn-fechar-sucesso" onclick="fecharReserva()">Fechar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const NOME_SUITE  = "Imperial";
+        const PRECO_NOITE = 320;
+    </script>
+    <script src="../js/reserva.js"></script>
 </body>
 
 </html>

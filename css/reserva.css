@@ -1,0 +1,342 @@
+/* ============================================================
+   RESERVA.CSS — Modal de reserva da Suíte Imperial
+   Segue o padrão visual de hotelcss.css
+   ============================================================ */
+
+/* ---- Overlay (fundo escuro) ---- */
+.reserva-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.reserva-overlay.active {
+    display: flex;
+}
+
+/* ---- Modal ---- */
+.reserva-modal {
+    background: var(--cor-branco);
+    border: 2px solid var(--cor-secundaria);
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+/* ---- Cabeçalho do modal ---- */
+.reserva-modal-header {
+    background: linear-gradient(135deg, #6b4423, var(--cor-secundaria));
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reserva-modal-header h2 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-branco);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.reserva-modal-header p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.8125rem;
+    margin-top: 4px;
+    font-family: var(--fonte-secundaria);
+}
+
+.reserva-fechar {
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: var(--cor-branco);
+    font-size: 1.25rem;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.reserva-fechar:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--cor-branco);
+}
+
+/* ---- Corpo do modal ---- */
+.reserva-modal-body {
+    padding: 40px;
+}
+
+/* ---- Campos de data e hóspedes ---- */
+.reserva-datas,
+.reserva-hospedes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.reserva-field label {
+    display: block;
+    font-family: var(--fonte-secundaria);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--cor-secundaria);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.reserva-field input,
+.reserva-field select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0d8d0;
+    background: var(--cor-claro);
+    font-family: var(--fonte-secundaria);
+    font-size: 0.875rem;
+    color: var(--cor-primaria);
+    transition: border-color 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.reserva-field input:focus,
+.reserva-field select:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+}
+
+.reserva-field input:hover,
+.reserva-field select:hover {
+    border-color: var(--cor-destaque);
+}
+
+/* ---- Mensagem de erro ---- */
+.reserva-erro {
+    display: none;
+    font-family: var(--fonte-secundaria);
+    font-size: 0.8125rem;
+    color: #c0392b;
+    border-left: 3px solid #c0392b;
+    padding-left: 12px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.reserva-erro.show {
+    display: block;
+}
+
+/* ---- Resumo de valores ---- */
+.reserva-resumo {
+    display: none;
+    background: var(--cor-claro);
+    border: 1px solid #e0d8d0;
+    border-left: 4px solid var(--cor-destaque);
+    padding: 25px 30px;
+    margin-bottom: 25px;
+}
+
+.reserva-resumo.show {
+    display: block;
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 0.875rem;
+    color: #666;
+    padding: 6px 0;
+}
+
+#linhaServico {
+    display: none;
+}
+
+#linhaServico.show {
+    display: flex;
+}
+
+.resumo-total {
+    border-top: 1px solid #e0d8d0;
+    margin-top: 10px;
+    padding-top: 15px !important;
+    font-size: 1.0rem !important;
+    font-weight: 700;
+    color: var(--cor-primaria) !important;
+}
+
+.resumo-total span:last-child {
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-principal);
+    font-size: 1.125rem;
+}
+
+/* ---- Botão confirmar reserva ---- */
+.btn-confirmar-reserva {
+    width: 100%;
+    padding: 15px 50px;
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
+    border: none;
+    font-family: var(--fonte-secundaria);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-confirmar-reserva:hover:not(:disabled) {
+    background: #6f4a2d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-confirmar-reserva:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* ---- Botão "Reservar Agora" dentro do texto ---- */
+.btn-reservar-texto {
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 15px 50px;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-reservar-texto:hover {
+    background: #6f4a2d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Etiqueta "/ noite" no preço ---- */
+.preco-noite {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.0rem;
+    color: #888;
+    font-weight: 400;
+}
+
+/* ---- Tela de sucesso ---- */
+.reserva-sucesso {
+    display: none;
+    text-align: center;
+    padding: 50px 40px;
+}
+
+.reserva-sucesso.show {
+    display: block;
+}
+
+.sucesso-icone {
+    width: 70px;
+    height: 70px;
+    border: 3px solid var(--cor-secundaria);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+    margin: 0 auto 25px;
+}
+
+.reserva-sucesso h3 {
+    font-family: var(--fonte-principal);
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+}
+
+.reserva-sucesso p {
+    font-family: var(--fonte-secundaria);
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 5px;
+}
+
+.sucesso-codigo {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.75rem !important;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--cor-destaque) !important;
+    border: 1px solid var(--cor-destaque);
+    padding: 6px 20px;
+}
+
+.btn-fechar-sucesso {
+    display: inline-block;
+    margin-top: 30px;
+    background: transparent;
+    color: var(--cor-secundaria);
+    border: 2px solid var(--cor-secundaria);
+    padding: 12px 40px;
+    font-family: var(--fonte-secundaria);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-fechar-sucesso:hover {
+    background: var(--cor-secundaria);
+    color: var(--cor-branco);
+}
+
+/* ---- Responsividade ---- */
+@media (max-width: 768px) {
+    .reserva-modal-header {
+        padding: 25px;
+    }
+
+    .reserva-modal-body {
+        padding: 25px;
+    }
+
+    .reserva-datas,
+    .reserva-hospedes {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .reserva-modal-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .reserva-sucesso {
+        padding: 35px 25px;
+    }
+}
