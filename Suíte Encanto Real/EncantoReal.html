@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/hotelcss.css">
     <link rel="stylesheet" href="../css/suite-detail.css">
     <link rel="stylesheet" href="../css/reserva.css">
+    <link rel="stylesheet" href="../css/acessibilidade.css">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         const usuario = localStorage.getItem("hotelUser");
         if (!usuario) {
             alert("Você precisa estar cadastrado para acessar esta suíte.");
-            window.location.href = "../formulario/cadastro.html";
+            window.location.href = "../formulario/login.html";
         }
     </script>
 
@@ -250,6 +251,7 @@
         const PRECO_NOITE  = 171;
     </script>
     <script src="../js/reserva.js"></script>
+    <script src="../js/acessibilidade.js"></script>
 </body>
 
 </html>

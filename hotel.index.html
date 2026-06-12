@@ -257,17 +257,17 @@
     </footer>
     <script>
         function verificarLogin(event) {
-            const usuario = localStorage.getItem("hotelUser");
+    const logado = sessionStorage.getItem("hotelLogado");
 
-            if (!usuario) {
-                event.preventDefault();
-                alert("Você precisa fazer cadastro/login para acessar as suítes.");
-                window.location.href = "formulario/cadastro.html";
-                return false;
-            }
+    if (!logado) {
+        event.preventDefault();
+        alert("Você precisa fazer login para acessar as suítes.");
+        window.location.href = "formulario/login.html";
+        return false;
+    }
 
-            return true;
-        }
+    return true;
+}
     </script>
     <script src="js/acessibilidade.js"></script>
 </body>
