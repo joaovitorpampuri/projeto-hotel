@@ -24,6 +24,20 @@
     color: #e0bc85;
 }
 
+#btn-minhas-reservas {
+    padding: 8px 14px;
+    background: linear-gradient(135deg, #c9a96e 0%, #e0bc85 100%);
+    color: #2a2a2a;
+    border: none;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+#btn-minhas-reservas:hover {
+    background: linear-gradient(135deg, #e0bc85 0%, #d4b07a 100%);
+    box-shadow: 0 4px 12px rgba(201, 169, 110, 0.4);
+}
+
 /* ============ DARK MODE ============ */
 
 .dark-mode {
@@ -107,6 +121,16 @@
 
 .dark-mode .servico-item h3 {
     color: #f1f1f1 !important;
+}
+
+.dark-mode #btn-minhas-reservas {
+    background: linear-gradient(135deg, #9d7e52 0%, #b8956e 100%);
+    color: #121212;
+}
+
+.dark-mode #btn-minhas-reservas:hover {
+    background: linear-gradient(135deg, #b8956e 0%, #a68960 100%);
+    box-shadow: 0 4px 12px rgba(201, 169, 110, 0.6);
 }
 
 /* ============ RESPONSIVO ============ */
